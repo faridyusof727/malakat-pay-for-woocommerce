@@ -1,22 +1,17 @@
-# Raudhah Pay for WooCommerce
+# Malakat Pay for WooCommerce
 
-WooCommerce payment integration through Raudhahpay
+WooCommerce payment integration through Malakat Pay
 
-# Installation
+## Installation
 
 * Login to WordPress Dashboard
 * Navigate to Plugins >> Add New
-* Search "Raudhah Pay for WooCommerce"
+* Search "Malakat Pay for WooCommerce"
 * Click Install >> Activate
 
-
-# Configuration
+## Configuration
 
 * Login to WordPress Dashboard
-* Navigate to WooCommerce >> Settings >> Payments >> Raudhahpay
-* Fill your API Access Token, API Signature Key and Collection Id which you get it from Raudhahpay site.
+* Navigate to WooCommerce >> Settings >> Payments >> Malakat Pay
+* Fill in your API Access Token, API Signature Key and Collection Id which you get from the Malakat Pay site.
 * Save changes
-
-# Other
-
-Facebook: [RaudhahPay Developer Community](https://www.facebook.com/groups/373364883330701/)
