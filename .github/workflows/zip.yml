@@ -18,3 +18,11 @@ jobs:
         with:
           # Filename for archive
           filename: malakat-pay-for-woocommerce.zip
+          # List of excluded files / directories
+          exclusions: "*.git* *.github*"
+
+      - name: Upload Release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          artifacts: "malakat-pay-for-woocommerce.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
