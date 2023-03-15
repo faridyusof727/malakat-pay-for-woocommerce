@@ -30,7 +30,7 @@ function raudhahpay_init()
         return;
     }
 
-    class WC_Raudhahpay_Gateway extends WC_Payment_Gateway
+    class WC_Malakatpay_Gateway extends WC_Payment_Gateway
     {
         const DEFAULT_CURRENCY = 'MYR';
 
@@ -75,7 +75,7 @@ function raudhahpay_init()
             add_action('woocommerce_update_options_payment_gateways_raudhahpay', array($this,'process_admin_options'));
 
             // Payment listener/API hook
-            add_action('woocommerce_api_wc_raudhahpay_gateway', array($this,'processIpnResponse'));
+            add_action('woocommerce_api_wc_malakatpay_gateway', array($this,'processIpnResponse'));
 
             // Update thank you page
             add_action('woocommerce_thankyou_raudhahpay', array($this, 'postPaymentPageContent'));
@@ -368,7 +368,7 @@ function raudhahpay_fallback_notice()
 }
 
 function raudhahpay_add_gateway($methods) {
-    $methods[] = 'WC_Raudhahpay_Gateway';
+    $methods[] = 'WC_Malakatpay_Gateway';
     return $methods;
 }
 
@@ -387,4 +387,4 @@ function bal_http_api_curl($handle)
 }
 
 add_filter('woocommerce_payment_gateways', 'raudhahpay_add_gateway');
-add_filter('raudhahpay_settings_value', array('WC_Raudhahpay_Gateway', 'settings_value'));
+add_filter('raudhahpay_settings_value', array('WC_Malakatpay_Gateway', 'settings_value'));
